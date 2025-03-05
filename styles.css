@@ -7,73 +7,101 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
 }
 
-/* Header and banner styles */
+/* Header */
 header {
     width: 100%;
-    height: 120px; /* Smaller banner height */
-    overflow: hidden;
+    background-color: #2b2b2b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.banner {
-    width: 100%;
-    height: 100%;
-    background-image: url('https://lh6.googleusercontent.com/G18H89ygzlvoKbOHyVKdhTQjN8b46Wt2MGs0mhv2BFmXQHfXjaMG-3EW1OHZQFD5WYOlGtBMSPOfMwnyEq-viYH85uDK6xeJeVaK8agzirGMZabxJMYGGjowA2Z97T9goA=w1280');
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.5s ease-in-out;
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-/* Smooth zoom effect when hovering over the banner */
-header:hover .banner {
-    transform: scale(1.05);
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f5a623;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://your-image-url.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
-    padding: 50px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: -50px; /* Adjust the position of the hero section */
-    position: relative;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-out;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    color: #2a2a2a;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.5rem;
+    max-width: 600px;
 }
 
-/* Member Dropdown */
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Meet Our Members Section */
 .member-dropdown {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Fully center on the page */
+    position: relative;
+    top: -50px;  /* Push it up a little */
+    background-color: #fff;
+    padding: 40px;
     text-align: center;
-    animation: fadeIn 1s ease-out;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-out;
 }
 
 .member-dropdown h2 {
@@ -83,99 +111,98 @@ header:hover .banner {
 }
 
 .member-dropdown select {
-    padding: 12px 20px;
+    padding: 15px 25px;
     font-size: 1.2rem;
-    border-radius: 25px; /* Smooth, rounded edges for the dropdown */
-    border: 1px solid #ddd;
+    border-radius: 30px;
+    border: 2px solid #ddd;
     background-color: #f7f7f7;
     color: #333;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 220px;
+    transition: all 0.3s ease;
+    width: 250px;
 }
 
 /* Hover effect for dropdown */
 .member-dropdown select:hover {
-    background-color: #eaeaea;
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    background-color: #f1f1f1;
+    border-color: #f5a623;
+    transform: scale(1.05);
 }
 
 /* Video Section */
 .videos {
-    background-color: #fff;
-    padding: 40px 20px;
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #fafafa;
     text-align: center;
 }
 
 .videos h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
 }
 
-/* Video Container */
 .video-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
     border-radius: 15px;
     border: none;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect for video iframes */
+/* Hover effect for videos */
 .video-container iframe:hover {
-    transform: scale(1.05); /* Smooth zoom effect */
+    transform: scale(1.05);
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    width: 100%;
+    background-color: #2b2b2b;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px 10px 0 0; /* Rounded top corners for footer */
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 1.1rem;
+    border-top: 5px solid #f5a623;
 }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
+footer a {
+    color: #f5a623;
+    text-decoration: none;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero h2 {
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .member-dropdown select {
+        width: 200px;
     }
 
     .video-container iframe {
-        width: 100%;
+        max-width: 100%;
         height: auto;
-    }
-
-    .member-dropdown {
-        margin-top: 20px;
     }
 }
