@@ -10,12 +10,15 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header and banner styles */
 header {
     width: 100%;
-    height: 250px; /* Reduced banner height */
+    height: 150px; /* Significantly smaller banner height */
     overflow: hidden;
     position: relative;
 }
@@ -24,8 +27,8 @@ header {
     width: 100%;
     height: 100%;
     background-image: url('https://lh6.googleusercontent.com/G18H89ygzlvoKbOHyVKdhTQjN8b46Wt2MGs0mhv2BFmXQHfXjaMG-3EW1OHZQFD5WYOlGtBMSPOfMwnyEq-viYH85uDK6xeJeVaK8agzirGMZabxJMYGGjowA2Z97T9goA=w1280');
-    background-size: cover; /* Ensures the image covers the entire header area */
-    background-position: center; /* Centers the background image */
+    background-size: cover;
+    background-position: center;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -47,7 +50,7 @@ header:hover .banner {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #2a2a2a;
     margin-bottom: 10px;
 }
@@ -63,7 +66,8 @@ header:hover .banner {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .member-dropdown h2 {
@@ -75,22 +79,19 @@ header:hover .banner {
 .member-dropdown select {
     padding: 12px 20px;
     font-size: 1.2rem;
-    border-radius: 8px;
+    border-radius: 25px; /* Smooth, rounded edges for the dropdown */
     border: 1px solid #ddd;
     background-color: #f7f7f7;
     color: #333;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 220px;
 }
 
 /* Hover effect for dropdown */
 .member-dropdown select:hover {
     background-color: #eaeaea;
-}
-
-.member-dropdown select option {
-    padding: 10px;
 }
 
 /* Videos Section */
