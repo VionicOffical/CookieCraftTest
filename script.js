@@ -7,47 +7,77 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
-        <!-- Banner Background -->
-        <div class="banner"></div>
+        <h1>Cookie Craft</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#members">Members</a>
+            <a href="#videos">Videos</a>
+        </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Welcome to Cookie Craft</h1>
-            <p>A Minecraft server for all your gaming needs</p>
-        </section>
 
-        <!-- Member Dropdown Section -->
-        <section class="member-dropdown">
-            <h2>Meet Our Members</h2>
-            <label for="members">Select a Member:</label>
-            <select id="members">
-                <option value="https://www.youtube.com/channel/UC12345">John Doe</option>
-                <option value="https://www.youtube.com/channel/UC67890">Jane Smith</option>
-                <option value="https://www.youtube.com/channel/UCI54321">Alex Brown</option>
-                <!-- Add more members here -->
-            </select>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Welcome to Cookie Craft</h2>
+        <p>Your ultimate Minecraft server experience. Join our community now!</p>
+    </section>
 
-        <section class="videos">
-            <h2>Latest Videos</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
+    <!-- Meet Our Members Section -->
+    <section id="members" class="member-dropdown">
+        <h2>Meet Our Members</h2>
+        <label for="members">Select a Member:</label>
+        <select id="members">
+            <option value="https://www.youtube.com/@MoonGuyyy">MoonGuyyy</option>
+            <option value="https://www.youtube.com/@eitifrie">eitifrie</option>
+            <option value="https://www.youtube.com/@guahlg">guahlg</option>
+            <option value="https://www.youtube.com/@MrWalnutYT">Walnutty</option>
+            <option value="https://www.youtube.com/@Arbythor">Arbythor</option>
+            <option value="https://www.youtube.com/@realuncloudy">uncloudy</option>
+            <!-- Add more members here -->
+        </select>
+    </section>
 
+    <!-- Video Section -->
+    <section id="videos" class="videos">
+        <h2>Latest Videos</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Video 1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video 2" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video 3" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Cookie Craft</p>
+        <p>&copy; 2023 Cookie Craft | <a href="https://www.youtube.com" target="_blank">Visit our YouTube</a></p>
     </footer>
 
+    <!-- JavaScript for Interactivity -->
     <script>
-        // Add functionality for the member dropdown to open the YouTube channel in a new tab
-        document.getElementById("members").addEventListener("change", function() {
-            window.open(this.value, "_blank");
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dropdown functionality for opening the YouTube channel
+        document.getElementById("members").addEventListener("change", function () {
+            const selectedUrl = this.value;
+            if (selectedUrl) {
+                window.open(selectedUrl, "_blank");
+            }
         });
     </script>
+
 </body>
 </html>
