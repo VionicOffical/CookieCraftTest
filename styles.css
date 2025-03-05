@@ -10,6 +10,10 @@ body {
     background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
+    /* Replace with your background image URL */
+    background-image: url('https://lh3.googleusercontent.com/t2lduV_3tk0IzHaCNxOMAGCx6ZkLuN5DtSggux_Eqo6nnL6VkCwzxaLlXBBjLK2a08xmwVV1lPgJQVKz30qKCvqZks1PXnEOAm05Xll-OGT_8JWJELikx0N2gOCqC9v-1Q=w1280'); /* ADD YOUR BACKGROUND IMAGE HERE */
+    background-size: cover;
+    background-position: center;
 }
 
 /* Header Section */
@@ -54,7 +58,8 @@ nav a:hover {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('https://your-image-url.jpg'); /* Replace with your image */
+    /* Replace with your banner image URL */
+    background-image: url('https://lh5.googleusercontent.com/N_Di-CCxt28A4s6Q7YizEULMh3Ta5_HoKkStL75e_Rxn7GMpEUC4nwaJT1qgIRQz2JPcvH0tnQM9wY0bRI3GjAAp9XKkE3cfuxc52aHSET1Ibq-VpGSU2vuDA3YClY5Jbg=w1280'); /* ADD YOUR BANNER IMAGE HERE */
     background-size: cover;
     background-position: center;
     color: white;
