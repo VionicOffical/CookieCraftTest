@@ -15,7 +15,7 @@ body {
 /* Header and banner styles */
 header {
     width: 100%;
-    height: 400px; /* Adjusted banner height */
+    height: 250px; /* Reduced banner height */
     overflow: hidden;
     position: relative;
 }
@@ -57,20 +57,36 @@ header:hover .banner {
     color: #555;
 }
 
-/* Dropdown Menu */
+/* Member Dropdown */
 .member-dropdown {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
     margin-top: 30px;
-    text-align: center;
+}
+
+.member-dropdown h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .member-dropdown select {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 12px 20px;
+    font-size: 1.2rem;
     border-radius: 8px;
     border: 1px solid #ddd;
     background-color: #f7f7f7;
     color: #333;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for dropdown */
+.member-dropdown select:hover {
+    background-color: #eaeaea;
 }
 
 .member-dropdown select option {
