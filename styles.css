@@ -29,30 +29,12 @@ header {
     right: 0;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px; /* Set the height of the banner */
+    background-position: center;
 }
 
 header h1 {
-    font-size: 3rem;
-    color: #f5a623;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    margin: 0 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #f5a623;
+    display: none; /* Hide the "Cookie Craft" text */
 }
 
 /* Hero Section */
