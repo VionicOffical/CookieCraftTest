@@ -1,4 +1,4 @@
-/* Global styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,44 +7,42 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
 }
 
-/* Header */
+/* Header Section */
 header {
     width: 100%;
-    background-color: #2b2b2b;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #222;
+    padding: 20px;
     text-align: center;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #f5a623;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-/* Navigation */
 nav {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 nav a {
+    margin: 0 20px;
     color: #fff;
-    margin: 0 15px;
-    font-size: 1.1rem;
     text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
@@ -56,31 +54,30 @@ nav a:hover {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('https://your-image-url.jpg');
+    background-image: url('https://your-image-url.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    color: #fff;
-    text-align: center;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     animation: fadeIn 2s ease-out;
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .hero p {
     font-size: 1.5rem;
     max-width: 600px;
+    line-height: 1.5;
 }
 
-/* Animation */
+/* Animation for Hero */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -92,16 +89,17 @@ nav a:hover {
     }
 }
 
-/* Meet Our Members Section */
+/* Members Dropdown */
 .member-dropdown {
-    position: relative;
-    top: -50px;  /* Push it up a little */
     background-color: #fff;
     padding: 40px;
-    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 60px auto;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1s ease-out;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
 }
 
 .member-dropdown h2 {
@@ -111,37 +109,45 @@ nav a:hover {
 }
 
 .member-dropdown select {
-    padding: 15px 25px;
+    padding: 12px 20px;
     font-size: 1.2rem;
     border-radius: 30px;
     border: 2px solid #ddd;
     background-color: #f7f7f7;
     color: #333;
     cursor: pointer;
-    transition: all 0.3s ease;
-    width: 250px;
+    width: 100%;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for dropdown */
 .member-dropdown select:hover {
-    background-color: #f1f1f1;
     border-color: #f5a623;
     transform: scale(1.05);
 }
 
+/* Animation for Member Dropdown */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Video Section */
 .videos {
-    width: 100%;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #fafafa;
     text-align: center;
 }
 
 .videos h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #333;
     margin-bottom: 40px;
-    letter-spacing: 1px;
 }
 
 .video-container {
@@ -156,26 +162,22 @@ nav a:hover {
     max-width: 560px;
     height: 315px;
     border-radius: 15px;
-    border: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect for videos */
 .video-container iframe:hover {
     transform: scale(1.05);
 }
 
-/* Footer Styles */
+/* Footer Section */
 footer {
-    width: 100%;
-    background-color: #2b2b2b;
+    background-color: #222;
     color: #fff;
     text-align: center;
     padding: 30px 20px;
-    margin-top: 50px;
-    font-size: 1.1rem;
-    border-top: 5px solid #f5a623;
+    margin-top: 40px;
+    font-size: 1.2rem;
 }
 
 footer a {
@@ -198,7 +200,7 @@ footer a:hover {
     }
 
     .member-dropdown select {
-        width: 200px;
+        width: 100%;
     }
 
     .video-container iframe {
