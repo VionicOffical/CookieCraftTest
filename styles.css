@@ -33,8 +33,13 @@ header {
     background-position: center;
 }
 
-header h1 {
-    display: none; /* Hide the "Cookie Craft" text */
+/* Replacing the text with the image */
+header img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Hero Section */
