@@ -11,7 +11,7 @@ body {
     color: #333;
     line-height: 1.6;
     /* Replace with your background image URL */
-    background-image: url('https://images3.alphacoders.com/133/1333794.jpeg'); /* White background image */
+    background-image: url('https://images2.alphacoders.com/137/thumb-1920-1374582.png'); /* White background image */
     background-size: cover;
     background-position: center;
 }
@@ -19,7 +19,7 @@ body {
 /* Header Section */
 header {
     width: 100%;
-    background-image: url('https://images3.alphacoders.com/133/1333794.jpeg'); /* Top banner image */
+    background-image: url(''); /* Top banner image */
     background-size: cover;
     padding: 20px;
     text-align: center;
@@ -46,7 +46,7 @@ header img {
 .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('https://images2.alphacoders.com/137/thumb-1920-1374582.png'); /* White background image */
+    background-image: url(''); /* White background image */
     background-size: cover;
     background-position: center;
     color: white;
